@@ -1,5 +1,12 @@
 <h1><%= house_results.count %> Members</h1>
 
-<% house_results.members.each do |member| %>
-<% binding.pry %>
-<% end %>
+<section class='members'>
+  <% house_results.members.each do |member| %>
+    <section class='member-<%= member.id %>'>
+      <p><%= member.name %></p>
+      <p><%= member.role %></p>
+      <p><%= member.house %></p>
+      <p><%= member.patronus %></p>
+    </section><br>
+  <% end %>
+</section>

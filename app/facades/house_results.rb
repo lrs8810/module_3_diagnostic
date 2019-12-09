@@ -4,7 +4,11 @@ class HouseResults
   end
 
   def members
-    @service.get_json
+    member_data = @service.get_json
+
+    member_data.map do |member|
+      Member.new(member)
+    end
   end
 
   def count

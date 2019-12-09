@@ -17,6 +17,5 @@ RSpec.describe "As a user when I visit the welcome page I select 'Gryffindor' an
     click_button 'Search For Members'
 
     expect(page).to have_content('21 Members')
-    expect(page).to have_content()
   end
 end
